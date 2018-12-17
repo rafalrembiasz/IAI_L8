@@ -8,6 +8,11 @@ import { ContactComponent } from './components/contact/contact.component';
 import { MapComponent } from './components/map/map.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import {RouterModule, Routes} from '@angular/router';
+import { BlogItemComponent } from './components/blog-item/blog-item.component';
+import { BlogItemTextComponent } from './components/blog-item-text/blog-item-text.component';
+import { BlogItemImageComponent } from './components/blog-item-image/blog-item-image.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { BlogItemDetailComponent } from './components/blog-item-detail/blog-item-detail.component';
 
 
 
@@ -25,13 +30,19 @@ const appRoutes: Routes = [
     component: QuizComponent,
   },
   {
-    path: 'Map',
+    path: 'map',
     component: MapComponent,
   },
   {
-    path: 'Navbar',
-    component: NavBarComponent,
-  }];
+    path: 'blog',
+    component: BlogComponent,
+  },
+  {
+    path: 'blog/detail/:id',
+    component: BlogItemDetailComponent
+  }
+
+];
 
 
 
@@ -42,7 +53,12 @@ const appRoutes: Routes = [
     NavBarComponent,
     ContactComponent,
     MapComponent,
-    QuizComponent
+    QuizComponent,
+    BlogItemComponent,
+    BlogItemTextComponent,
+    BlogItemImageComponent,
+    BlogComponent,
+    BlogItemDetailComponent
   ],
   imports: [
     BrowserModule,
